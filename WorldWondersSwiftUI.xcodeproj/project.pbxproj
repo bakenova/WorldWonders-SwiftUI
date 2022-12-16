@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AFAD95294C9FAB007F2F47 /* WorldWonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AFAD94294C9FAB007F2F47 /* WorldWonder.swift */; };
+		30AFAD97294C9FE7007F2F47 /* GetWonders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AFAD96294C9FE7007F2F47 /* GetWonders.swift */; };
 		AD4A4B6D281466740099F0C4 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AD4A4B6C281466740099F0C4 /* SwiftyJSON */; };
 		AD4A4B702814675C0099F0C4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AD4A4B6F2814675C0099F0C4 /* SDWebImageSwiftUI */; };
 		AD4C5F7E2812C022003874CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4C5F7D2812C022003874CB /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30AFAD94294C9FAB007F2F47 /* WorldWonder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldWonder.swift; sourceTree = "<group>"; };
+		30AFAD96294C9FE7007F2F47 /* GetWonders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWonders.swift; sourceTree = "<group>"; };
 		AD4C5F7A2812C022003874CB /* WorldWondersSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldWondersSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4C5F7D2812C022003874CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4C5F7F2812C022003874CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				AD4C5F7D2812C022003874CB /* AppDelegate.swift */,
 				AD4C5F7F2812C022003874CB /* SceneDelegate.swift */,
 				AD4C5F812812C022003874CB /* ContentView.swift */,
+				30AFAD96294C9FE7007F2F47 /* GetWonders.swift */,
+				30AFAD94294C9FAB007F2F47 /* WorldWonder.swift */,
 				AD4C5F832812C025003874CB /* Assets.xcassets */,
 				AD4C5F882812C025003874CB /* LaunchScreen.storyboard */,
 				AD4C5F8B2812C025003874CB /* Info.plist */,
@@ -281,6 +287,8 @@
 				AD4C5F7E2812C022003874CB /* AppDelegate.swift in Sources */,
 				AD4C5F802812C022003874CB /* SceneDelegate.swift in Sources */,
 				AD4C5F822812C022003874CB /* ContentView.swift in Sources */,
+				30AFAD95294C9FAB007F2F47 /* WorldWonder.swift in Sources */,
+				30AFAD97294C9FE7007F2F47 /* GetWonders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

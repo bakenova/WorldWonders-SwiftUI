@@ -9,33 +9,6 @@ import SwiftUI
 import SwiftyJSON
 import SDWebImageSwiftUI
 
-struct WorldWonder: Identifiable {
-    var id = UUID()
-    var name = ""
-    var region = ""
-    var location = ""
-    var flag = ""
-    var picture = ""
-    
-    init(json: JSON) {
-        if let temp = json["name"].string {
-            name = temp
-        }
-        if let temp = json["region"].string {
-            region = temp
-        }
-        if let temp = json["location"].string {
-            location = temp
-        }
-        if let temp = json["flag"].string {
-            flag = temp
-        }
-        if let temp = json["picture"].string {
-            picture = temp
-        }
-    }
-}
-
 struct WonderRow: View {
     var wonderItem: WorldWonder
     
@@ -73,9 +46,6 @@ struct ContentView: View {
             List (wondersList.wondersArray){ wonderItem in
                 WonderRow(wonderItem: wonderItem)
             }
-            /*.refreshable {
-                self.wondersList.updateData()
-            }*/
             .navigationTitle("World Wonders")
         }
     }
@@ -84,38 +54,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-class GetWonders: ObservableObject {
-    @Published var wondersArray = [WorldWonder]()
-    
-    init() {
-        updateData()
-    }
-    
-    func updateData(){
-        let urlString = "https://demo3886709.mockable.io/getWonders"
-        let url = URL(string: urlString)
-        let session = URLSession(configuration: .default)
-        
-        session.dataTask(with: url!) { (data, _, error) in
-            if  error != nil {
-                print(error?.localizedDescription as Any)
-                return
-            }
-            let json = try! JSON(data: data!)
-            if let resultArray = json.array {
-                self.wondersArray.removeAll()
-                
-                for item in resultArray {
-                    let wonder = WorldWonder(json: item)
-                    
-                    DispatchQueue.main.async {
-                        self.wondersArray.append(wonder)
-                    }
-                }
-            }
-        }.resume()
     }
 }
